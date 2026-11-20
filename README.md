@@ -54,8 +54,8 @@ helpdesk/
 │   │       ├── static/               # Static files (CSS, JS)
 │   │       └── templates/            # Thymeleaf templates
 │   └── test/                         # Test classes
-├── compose.yml                       # Docker Compose configuration
-├── Containerfile                     # Docker configuration
+├── compose.yml                       # Docker/Podman Compose configuration
+├── Containerfile                     # Docker/Podman configuration
 └── pom.xml                           # Maven configuration
 ```
 
