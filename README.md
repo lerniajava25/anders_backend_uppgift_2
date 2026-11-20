@@ -195,12 +195,12 @@ CREATE TABLE comments (
 
 ## Entity Relationships
 
-- **User -> Ticket**: One-to-Many (created_tickets, assigned_tickets)
-- **User -> Comment**: One-to-Many (comments)
-- **Ticket -> Comment**: One-to-Many (comments)
-- **Ticket -> User**: Many-to-One (created_by, assigned_to)
-- **Comment -> User**: Many-to-One (user)
-- **Comment -> Ticket**: Many-to-One (ticket)
+- **User → Ticket**: One-to-Many (created_tickets, assigned_tickets)
+- **User → Comment**: One-to-Many (comments)
+- **Ticket → Comment**: One-to-Many (comments)
+- **Ticket → User**: Many-to-One (created_by, assigned_to)
+- **Comment → User**: Many-to-One (user)
+- **Comment → Ticket**: Many-to-One (ticket)
 
 ## API Endpoints
 
@@ -326,6 +326,9 @@ The application includes sample data that is loaded on first startup. You can te
 - Check if user is active
 - Ensure correct role is assigned
 
+### Other issues
+- Prevent build with cached content: `podman compose build --no-cache app`
+
 ## Development
 
 ### Running Tests
@@ -346,11 +349,9 @@ docker build -t helpdesk-app .
 podman build -t helpdesk-app .
 
 # Run the container
-docker run -p 8080:8080 --network=host
- helpdesk-app
+docker run -p 8080:8080 --network=host helpdesk-app
  # or
-podman run -p 8080:8080 --network=host
- helpdesk-app
+podman run -p 8080:8080 --network=host helpdesk-app
 ```
 
 ## License
