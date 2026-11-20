@@ -51,12 +51,12 @@ helpdesk/
 │   │   │       ├── security/         # Security configuration
 │   │   │       └── service/          # Business services
 │   │   └── resources/
-│   │       ├── static/              # Static files (CSS, JS)
-│   │       └── templates/           # Thymeleaf templates
-│   └── test/                        # Test classes
-├── compose.yml               # Docker Compose configuration
-├── Containerfile                       # Docker configuration
-└── pom.xml                          # Maven configuration
+│   │       ├── static/               # Static files (CSS, JS)
+│   │       └── templates/            # Thymeleaf templates
+│   └── test/                         # Test classes
+├── compose.yml                       # Docker Compose configuration
+├── Containerfile                     # Docker configuration
+└── pom.xml                           # Maven configuration
 ```
 
 ## Quick Start
@@ -240,8 +240,8 @@ CREATE TABLE comments (
 ## Frontend Features
 
 - **Responsive Design**: Works on mobile, tablet, and desktop
-- **Bootstrap 5**: Modern UI components
-- **Bootstrap Icons**: Icon library
+- **Tailwind CSS 4**: Modern UI components
+- **Font Awesome Icons**: Icon library
 - **Thymeleaf**: Server-side rendering
 - **Form Validation**: Client and server-side validation
 - **Flash Messages**: Success/error notifications
@@ -278,7 +278,7 @@ Edit `compose.yml` to change database settings:
 ```yaml
 services:
   postgres:
-    image: postgres:15-alpine
+    image: postgres:17-alpine
     environment:
       POSTGRES_DB: helpdesk
       POSTGRES_USER: postgres
