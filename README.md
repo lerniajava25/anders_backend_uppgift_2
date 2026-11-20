@@ -312,12 +312,22 @@ The application includes sample data that is loaded on first startup. You can te
 ## Troubleshooting
 
 ### Database Connection Issues
-- Ensure PostgreSQL is running: `docker ps`
+- Ensure PostgreSQL is running:
+```bash
+docker ps
+# or
+podman ps
+```
 - Check connection: `psql -h localhost -U postgres -d helpdesk`
 - Verify credentials in `application.properties`
 
 ### Application Not Starting
-- Check logs: `docker compose logs app`
+- Check logs:
+```bash
+docker compose logs app
+# or
+podman compose logs app
+```
 - Build manually: `mvn clean package`
 - Check Java version: `java -version`
 
@@ -327,8 +337,12 @@ The application includes sample data that is loaded on first startup. You can te
 - Ensure correct role is assigned
 
 ### Other issues
-- Prevent build with cached content: `podman compose build --no-cache app`
-
+- Prevent build with cached content:
+```bash
+docker compose build --no-cache app
+# or
+podman compose build --no-cache app
+```
 ## Development
 
 ### Running Tests
